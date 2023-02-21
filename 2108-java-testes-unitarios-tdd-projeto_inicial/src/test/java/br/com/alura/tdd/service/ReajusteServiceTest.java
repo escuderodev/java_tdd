@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class ReajusteServiceTest {
-
     private ReajusteService service;
     private Funcionario funcionario;
 
