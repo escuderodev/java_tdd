@@ -12,9 +12,8 @@ public class BonusServiceTeste {
     @Test
     public void validaBonusMaiorQueDezPorcentoDevolveZero() {
         BonusService bonusService = new BonusService();
-        BigDecimal bonus = bonusService.calcularBonus(new Funcionario("Escudero", LocalDate.now(), new BigDecimal("25000")));
+        Assertions.assertThrows(IllegalArgumentException.class, () -> bonusService.calcularBonus(new Funcionario("Escudero", LocalDate.now(), new BigDecimal("25000"))));
 
-        Assertions.assertEquals(new BigDecimal("0.00"), bonus);
     }
 
     @Test
